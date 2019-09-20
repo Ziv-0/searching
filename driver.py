@@ -51,6 +51,8 @@ class PuzzleState(object):
             new_config[blank_index],new_config[target] = new_config[target],new_config[blank_index]
             return PuzzleState(tuple(new_config),self.n,parent=self,action='Right',cost = self.cost + 1)
 
+
+
     def move_up(self):
         if self.blank_row == 0:
             return None
